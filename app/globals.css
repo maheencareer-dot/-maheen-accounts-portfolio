@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --paper:#f2f5f2; --panel:#fbfcfb; --ink:#12241d; --mute:#4f635a; --rule:#c9d4cd; --accent:#1d6b56; }
+@media (prefers-color-scheme: dark) {
+  :root { --paper:#0e1714; --panel:#13201b; --ink:#e6efe9; --mute:#9db2a7; --rule:#27382f; --accent:#63c4a3; }
+}
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.65; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise .6s ease-out both; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .rise { animation: none; } }
